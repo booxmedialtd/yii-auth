@@ -14,7 +14,7 @@ $this->pageTitle = Yii::t('AuthModule.main', 'New {type}', array('{type}' => $th
 <?php $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',
     array(
-        'layout' => TbHtml::FORM_LAYOUT_HORIZONTAL,
+        'layout' => TbHtml::FORM_LAYOUT_VERTICAL,
     )
 ); ?>
 
@@ -32,7 +32,7 @@ $this->pageTitle = Yii::t('AuthModule.main', 'New {type}', array('{type}' => $th
     <?php echo TbHtml::linkButton(
         Yii::t('AuthModule.main', 'Cancel'),
         array(
-            'color' => TbHtml::BUTTON_COLOR_LINK,
+            'color' => TbHtml::BUTTON_COLOR_DEFAULT,
             'url' => array('index'),
         )
     ); ?>
