@@ -5,9 +5,9 @@
 $this->breadcrumbs = array(
     $this->capitalize($this->getTypeText(true)),
 );
-?>
 
-    <h1><?php echo $this->capitalize($this->getTypeText(true)); ?></h1>
+$this->pageTitle = $this->capitalize($this->getTypeText(true));
+?>
 
 <?php echo TbHtml::linkButton(
     Yii::t('AuthModule.main', 'Add {type}', array('{type}' => $this->getTypeText())),

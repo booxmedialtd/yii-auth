@@ -10,6 +10,8 @@ $this->breadcrumbs = [
     Yii::t('AuthModule.main', 'Assignments') => ['index'],
     TbHtml::value($model, $this->module->userNameColumn),
 ];
+
+$this->pageTitle = Yii::t('AuthModule.main', 'Assignments');
 ?>
 
     <h1><?php echo TbHtml::encode(TbHtml::value($model, $this->module->userNameColumn)); ?>
