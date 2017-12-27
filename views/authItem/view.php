@@ -11,6 +11,8 @@ $this->breadcrumbs = array(
     $this->capitalize($this->getTypeText(true)) => array('index'),
     $item->description,
 );
+
+$this->pageTitle = $this->capitalize($this->getTypeText(true));
 ?>
 
     <div class="title-row clearfix">

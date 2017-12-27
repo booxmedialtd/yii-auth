@@ -9,6 +9,7 @@ $this->breadcrumbs = [
     $item->description => ['view', 'name' => $item->name],
     Yii::t('AuthModule.main', 'Edit'),
 ];
+$this->pageTitle = $this->capitalize($this->getTypeText(true));
 ?>
 
 <h1>
