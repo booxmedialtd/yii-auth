@@ -24,7 +24,6 @@ $this->pageTitle = $this->capitalize($this->getTypeText(true));
         'id' => 'task-grid',
         'dataProvider' => $dataProvider,
         'emptyText' => Yii::t('AuthModule.main', 'No {type} found.', ['{type}' => $this->getTypeText(true)]),
-        'template' => "{items}",
         'columns' => [
             [
                 'name' => 'name',
@@ -64,17 +63,3 @@ $this->pageTitle = $this->capitalize($this->getTypeText(true));
     ]
 );
 
-Yii::app()->clientScript->registerScript('streamProfileComponents', "
-        $(function () {
-                 
-            // initialize dataTable
-            $('#task-grid table').DataTable({
-              'paging'      : true,
-              'lengthChange': true,
-              'searching'   : true,
-              'ordering'    : true,
-              'info'        : true,
-              'autoWidth'   : false
-            });
-                 
-        })", CClientScript::POS_END);

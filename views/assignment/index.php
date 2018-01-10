@@ -16,7 +16,6 @@ $this->pageTitle = Yii::t('AuthModule.main', 'Assignments');
         'type' => [TbHtml::GRID_TYPE_BORDERED, TbHtml::GRID_TYPE_STRIPED],
         'dataProvider' => $dataProvider,
         'emptyText' => Yii::t('AuthModule.main', 'No assignments found.'),
-        'template' => "{items}",
         'columns' => [
             [
                 'header' => Yii::t('AuthModule.main', 'User'),
@@ -32,16 +31,3 @@ $this->pageTitle = Yii::t('AuthModule.main', 'Assignments');
         ],
     ]
 );
-
-Yii::app()->clientScript->registerScript('authComponents', "
-        $(function () {   
-            // initialize dataTable
-            $('#auth-grid table').DataTable({
-              'paging'      : true,
-              'lengthChange': true,
-              'searching'   : true,
-              'ordering'    : true,
-              'info'        : true,
-              'autoWidth'   : false
-            });
-        })", CClientScript::POS_END);
