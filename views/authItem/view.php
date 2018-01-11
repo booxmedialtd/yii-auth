@@ -114,7 +114,6 @@ $this->pageTitle = $this->capitalize($this->getTypeText(true));
         'type' => [TbHtml::GRID_TYPE_BORDERED, TbHtml::GRID_TYPE_STRIPED],
         'dataProvider' => $descendantDp,
         'emptyText' => Yii::t('AuthModule.main', 'This item does not have any descendants.'),
-        'template' => "{items}",
         'columns' => [
             [
                 'class' => 'AuthItemDescriptionColumn',
@@ -155,16 +154,3 @@ $this->pageTitle = $this->capitalize($this->getTypeText(true));
     <?php $this->endWidget(); ?>
 
 <?php endif;
-
-Yii::app()->clientScript->registerScript('authComponents', "
-        $(function () {   
-            // initialize dataTable
-            $('#authitem-view-grid table').DataTable({
-              'paging'      : true,
-              'lengthChange': true,
-              'searching'   : true,
-              'ordering'    : true,
-              'info'        : true,
-              'autoWidth'   : false
-            });
-        })", CClientScript::POS_END);

@@ -29,6 +29,7 @@ abstract class AuthItemController extends AuthController
             'index',
             array(
                 'dataProvider' => $dataProvider,
+                'pagination'=> ['pageSize' => 25],
             )
         );
     }

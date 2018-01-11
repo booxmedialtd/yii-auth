@@ -22,7 +22,8 @@ class AssignmentController extends AuthController
         $this->render(
             'index',
             array(
-                'dataProvider' => $dataProvider
+                'dataProvider' => $dataProvider,
+                'pagination'=> ['pageSize' => 25],
             )
         );
     }
