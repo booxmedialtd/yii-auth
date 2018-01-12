@@ -3,9 +3,9 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs = [
-    Yii::t('AuthModule.main', 'Assignments'),
+    'CMS User Roles' => ['index'],
+    'Assignments',
 ];
-
 $this->pageTitle = Yii::t('AuthModule.main', 'Assignments');
 ?>
 
