@@ -7,10 +7,11 @@
 /* @var $form TbActiveForm */
 /* @var $childOptions array */
 
-$this->breadcrumbs = array(
-    $this->capitalize($this->getTypeText(true)) => array('index'),
+$this->breadcrumbs = [
+    'CMS User Roles' => ['index'],
+    $this->capitalize($this->getTypeText(true)) => ['index'],
     $item->description,
-);
+];
 
 $this->pageTitle = $this->capitalize($this->getTypeText(true));
 ?>

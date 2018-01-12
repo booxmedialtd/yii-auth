@@ -5,6 +5,7 @@
 /* @var $form TbActiveForm */
 
 $this->breadcrumbs = [
+    'CMS User Roles' => ['index'],
     $this->capitalize($this->getTypeText(true)) => ['index'],
     $item->description => ['view', 'name' => $item->name],
     Yii::t('AuthModule.main', 'Edit'),

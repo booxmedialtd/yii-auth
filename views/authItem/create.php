@@ -3,10 +3,11 @@
 /* @var $model AuthItemForm */
 /* @var $form TbActiveForm */
 
-$this->breadcrumbs = array(
-    $this->capitalize($this->getTypeText(true)) => array('index'),
-    Yii::t('AuthModule.main', 'New {type}', array('{type}' => $this->getTypeText())),
-);
+$this->breadcrumbs = [
+    'CMS User Roles' => ['index'],
+    $this->capitalize($this->getTypeText(true)) => ['index'],
+    Yii::t('AuthModule.main', 'New {type}', ['{type}' => $this->getTypeText()]),
+];
 
 $this->pageTitle = Yii::t('AuthModule.main', 'New {type}', array('{type}' => $this->getTypeText()));;
 ?>

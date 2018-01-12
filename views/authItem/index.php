@@ -2,9 +2,10 @@
 /* @var $this OperationController|TaskController|RoleController */
 /* @var $dataProvider AuthItemDataProvider */
 
-$this->breadcrumbs = array(
+$this->breadcrumbs = [
+    'CMS User Roles' => ['index'],
     $this->capitalize($this->getTypeText(true)),
-);
+];
 
 $this->pageTitle = $this->capitalize($this->getTypeText(true));
 ?>
