@@ -9,6 +9,7 @@
 $this->breadcrumbs = [
     'CMS User Roles' => ['index'],
     'Assignments',
+    TbHtml::value($model, $this->module->userNameColumn),
 ];
 
 $this->pageTitle = Yii::t('AuthModule.main', 'Assignments');
