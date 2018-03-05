@@ -19,11 +19,6 @@ class AssignmentController extends AuthController
     {
         $dataProvider = new CActiveDataProvider($this->module->userClass);
 
-        $cs = Yii::app()->clientScript;
-        $cs->scriptMap = [
-            'bootstrap.min.js' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
-        ];
-
         $this->render(
             'index',
             array(

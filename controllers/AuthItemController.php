@@ -25,6 +25,11 @@ abstract class AuthItemController extends AuthController
         $dataProvider = new AuthItemDataProvider();
         $dataProvider->type = $this->type;
 
+        $cs = Yii::app()->clientScript;
+        $cs->scriptMap = [
+            'bootstrap.min.js' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+        ];
+
         $this->render(
             'index',
             array(
