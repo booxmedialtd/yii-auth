@@ -53,14 +53,33 @@ $this->pageTitle = $this->capitalize($this->getTypeText(true));
                 'updateButtonLabel' => Yii::t('AuthModule.main', '<button class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i></button>'),
                 'updateButtonUrl' => "Yii::app()->controller->createUrl('update', array('name'=>\$data->name))",
 
-                'deleteButtonOptions' => ['title' => 'Delete'],
                 'deleteButtonIcon' => false,
                 'deleteButtonImageUrl' => false,
                 'deleteButtonLabel' => Yii::t('AuthModule.main', '<button class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></button>'),
-                'deleteButtonUrl' => "Yii::app()->controller->createUrl('delete', array('name'=>\$data->name))",
-                'deleteConfirmation' => Yii::t('AuthModule.main', 'Are you sure you want to delete this item?'),
+                'deleteButtonUrl' => "",
+                'deleteButtonOptions' => ['data-toggle' => 'modal', 'data-target' => '#modal-delete', 'title'=>'Delete', 'value' => $this->getTypeText(true)],
+                'buttons' => [
+                    'delete' => [
+                        'url' => "Yii::app()->controller->createUrl('delete', ['name'=>\$data->name])",
+                        'click' => "
+                        function( e ){
+                        var url = $(this).attr('href');
+                        var typeText = $(this).attr('value');
+                        var title = 'Delete item';
+                        var content = 'Are you sure you want to delete this item?';
+                       
+                        var data = {
+                                    url:url,
+                                    title:title,
+                                    content:content
+                                    };
+                        
+                        deleteOnGetRequest(data);
+                        }
+                        ",
+                    ],
+                ],
             ],
         ],
     ]
 );
-
